@@ -2,17 +2,20 @@
 
 ## Overview
 
-In this lab, we are analyzing an email to determine whether it is malicious and to gain a better understanding of the challenges involved in email threat analysis.
+Phishing email analysis involves safely isolating and inspecting suspicious emails, headers, and links to identify malicious activity without risking endpoint compromise.
 
 ![image alt](https://github.com/kentbalmoria7-oss/LetsDefend-SOCAnalystLearningPath/blob/ef90cd22941fc47db9e830a4e1627073e9af46a9/Screenshot%202026-10-02%20050644.png)
 ---
 
 ## Lab Objectives
 
-- Extract and inspect email headers (SPF, DKIM, DMARC, Sender IP).
-- Analyze the email body for suspicious URLs, domain typosquatting, or social engineering indicators.
-- Examine attachments for potential malware payloads.
-- Map findings to the Cyber Kill Chain and propose remediation steps.
+Extract Core IoCs: Inspect raw email headers, Return-Path data, and embedded hyperlinks to isolate key technical artifacts.
+
+Evaluate Threat Intelligence: Run extracted domains, URLs, and file hashes through tools like VirusTotal, URLhaus, and WHOIS to assess reputation.
+
+Inspect Payloads Safely: Preview linked landing pages using sandboxed or visual tools (e.g., URL2PNG, Hybrid Analysis) inside an isolated virtual machine.
+
+Determine Attack Verdict: Synthesize findings to confirm whether the message is a legitimate notification or a malicious phishing campaign.
 
 ## Scenario
 
