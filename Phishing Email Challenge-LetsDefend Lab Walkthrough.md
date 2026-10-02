@@ -4,6 +4,7 @@
 
 In this lab, we are analyzing an email to determine whether it is malicious and to gain a better understanding of the challenges involved in email threat analysis.
 
+![image alt](https://github.com/kentbalmoria7-oss/LetsDefend-SOCAnalystLearningPath/blob/ef90cd22941fc47db9e830a4e1627073e9af46a9/Screenshot%202026-10-02%20050644.png)
 ---
 
 ## Lab Objectives
