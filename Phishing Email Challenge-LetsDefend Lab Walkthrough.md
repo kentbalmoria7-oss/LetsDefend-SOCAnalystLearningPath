@@ -54,3 +54,10 @@ You received an email sent to an address exposed in a data breach, claiming to c
 ![image alt](https://github.com/kentbalmoria7-oss/LetsDefend-SOCAnalystLearningPath/blob/3f52bf4419c051e891242c7f49562c082e80ec19/1/Link%20location.png)
 ![image alt](https://github.com/kentbalmoria7-oss/LetsDefend-SOCAnalystLearningPath/blob/3f52bf4419c051e891242c7f49562c082e80ec19/1/Virustotal.png)
 ![image alt](https://github.com/kentbalmoria7-oss/LetsDefend-SOCAnalystLearningPath/blob/3f52bf4419c051e891242c7f49562c082e80ec19/1/hyrbid.png)
+
+**📌 VERDICT: PHISHING**
+
+### 🎯 Finding / Answer
+Based on the analysis, this email is confirmed to be a phishing attack containing a hyperlink that redirects to a malicious URL.
+
+
