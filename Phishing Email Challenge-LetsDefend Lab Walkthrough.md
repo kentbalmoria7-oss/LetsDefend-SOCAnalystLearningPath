@@ -24,3 +24,20 @@ You received an email sent to an address exposed in a data breach, claiming to c
 ![image alt](https://github.com/kentbalmoria7-oss/LetsDefend-SOCAnalystLearningPath/blob/dc15b4f01887be2c74eaa80ea217a76bd61cf215/1/paypal.png)
 
 > **Note:** As a cybersecurity best practice, any suspicious emails, links, or file attachments should be inspected and detonated within an isolated sandbox environment to safely determine if they are malicious.
+
+
+
+
+
+
+# 🔍 Email Header Analysis — Step 1
+---
+## 📌 STEP 1: CHECK THE RETURN PATH
+
+* **Action:** View the raw source code of the email header.
+* **Method:** Use the search feature (`CTRL + F`) to search for `Return-Path`.
+
+> **Note:** The return path (also known as the envelope sender, `MAIL FROM` address, or reverse path) is a hidden email header that specifies where mail servers should send delivery failure notifications or bounced emails.
+---
+### 🎯 Finding / Answer
+`bounce@rjttznyzjjzydnillquh.designclub.uk.com`
