@@ -38,6 +38,15 @@ You received an email sent to an address exposed in a data breach, claiming to c
 * **Method:** Use the search feature (`CTRL + F`) to search for `Return-Path`.
 
 > **Note:** The return path (also known as the envelope sender, `MAIL FROM` address, or reverse path) is a hidden email header that specifies where mail servers should send delivery failure notifications or bounced emails.
+
+![image alt](https://github.com/kentbalmoria7-oss/LetsDefend-SOCAnalystLearningPath/blob/3d1e14828fe3a802cf3329c0c9be2d07af02b7ca/1/viewsource.png)
+![image alt](https://github.com/kentbalmoria7-oss/LetsDefend-SOCAnalystLearningPath/blob/427c0d7c0978b907497c564ef7a778c70be893cc/1/return%20path.png)
 ---
 ### 🎯 Finding / Answer
 `bounce@rjttznyzjjzydnillquh.designclub.uk.com`
+
+
+## 📌 STEP 2: EXTRACT AND VERIFY DESTINATION URL
+
+* **Action:** Copy the destination URL from the link provided in the email.
+* **Method:** Verify the domain name to ensure it routes to the correct destination, then check its reputation using **VirusTotal** and **Hybrid Analysis**.
