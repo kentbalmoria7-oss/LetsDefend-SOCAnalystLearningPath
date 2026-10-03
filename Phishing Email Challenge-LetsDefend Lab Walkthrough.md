@@ -50,3 +50,7 @@ You received an email sent to an address exposed in a data breach, claiming to c
 
 * **Action:** Copy the destination URL from the link provided in the email.
 * **Method:** Verify the domain name to ensure it routes to the correct destination, then check its reputation using **VirusTotal** and **Hybrid Analysis**.
+
+![image alt](https://github.com/kentbalmoria7-oss/LetsDefend-SOCAnalystLearningPath/blob/3f52bf4419c051e891242c7f49562c082e80ec19/1/Link%20location.png)
+![image alt](https://github.com/kentbalmoria7-oss/LetsDefend-SOCAnalystLearningPath/blob/3f52bf4419c051e891242c7f49562c082e80ec19/1/Virustotal.png)
+![image alt](https://github.com/kentbalmoria7-oss/LetsDefend-SOCAnalystLearningPath/blob/3f52bf4419c051e891242c7f49562c082e80ec19/1/hyrbid.png)
