@@ -26,11 +26,6 @@ You received an email sent to an address exposed in a data breach, claiming to c
 > **Note:** As a cybersecurity best practice, any suspicious emails, links, or file attachments should be inspected and detonated within an isolated sandbox environment to safely determine if they are malicious.
 
 
-
-
-
-
-# 🔍 Email Header Analysis — Step 1
 ---
 ## 📌 STEP 1: CHECK THE RETURN PATH
 
