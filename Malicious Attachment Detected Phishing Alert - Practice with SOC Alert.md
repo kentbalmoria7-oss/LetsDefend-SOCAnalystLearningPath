@@ -265,11 +265,11 @@ Based on the analysis done, this alert indicates a **True Positive**: a phishing
 
 | Type | Indicator (Defanged) | Source | Assessment |
 | :--- | :--- | :--- | :--- |
-| 📧 Sender Address | `accounting[@]cmail[.]carleton[.]ca` | Alert / ticket | 🔴 Malicious |
-| 🌐 SMTP Address | `49[.]234[.]43[.]39` | Alert / ticket | 🔴 Malicious |
+| 📧 Sender Address | `accounting@cmail.carleton.ca` | Alert / ticket | 🔴 Malicious |
+| 🌐 SMTP Address | `49.234.43.39` | Alert / ticket | 🔴 Malicious |
 | 📎 Email Attachment | Attached file from the phishing email | Email Security, VirusTotal, Hybrid Analysis | 🔴 Malicious |
 | 🔗 Contacted Domain | Domain contacted by the attachment | VirusTotal, Log Management | 🔴 Malicious |
-| 💻 Affected Host | `5[.]135[.]143[.]133` (Richardprd) | Log Management, Endpoint Security | 🟠 Compromised, contained |
+| 💻 Affected Host | `5.135.143.133` (Richardprd) | Log Management, Endpoint Security | 🟠 Compromised, contained |
 
 ---
 
