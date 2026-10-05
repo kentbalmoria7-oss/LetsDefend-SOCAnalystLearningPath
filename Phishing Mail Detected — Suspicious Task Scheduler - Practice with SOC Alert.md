@@ -212,7 +212,7 @@ Multiple security vendors flagged the file as **malicious**, for example as a **
 | | |
 | :--- | :--- |
 | **Action** | Find the log records showing the email's interaction with the network. |
-| **Method** | Search Log Management for the SMTP address `189[.]162[.]189[.]159` with destination `172[.]16[.]20[.]3` on port `25`. |
+| **Method** | Search Log Management for the SMTP address `189.162.189.159` with destination `172.16.20.3` on port `25`. |
 
 <div align="center">
 <img src="https://github.com/kentbalmoria7-oss/LetsDefend-SOCAnalystLearningPath/blob/4ca99d525f186c876966b0a4419e5c12dd541592/4/ips.png?raw=true" alt="Log Management search for the SMTP address and destination on port 25" width="85%" />
@@ -229,7 +229,6 @@ Multiple security vendors flagged the file as **malicious**, for example as a **
 | **Method** | Look up the destination IP, then review its process history and terminal history. |
 
 <div align="center">
-<img src="https://github.com/kentbalmoria7-oss/LetsDefend-SOCAnalystLearningPath/blob/ba21dab925819a3dea97b0e665947d1053103549/4/server.png?raw=true" alt="Endpoint Security showing the destination is an Exchange Server" width="85%" />
 <br/><br/>
 <img src="https://github.com/kentbalmoria7-oss/LetsDefend-SOCAnalystLearningPath/blob/72d7fe1154a2f0ce54463b4d45b0a511f56ce11f/4/process.png?raw=true" alt="Process history of the Exchange Server" width="85%" />
 <br/><br/>
@@ -290,10 +289,10 @@ Based on the analysis done, this alert indicates a **True Positive**: a phishing
 
 | Type | Indicator (Defanged) | Source | Assessment |
 | :--- | :--- | :--- | :--- |
-| 📧 Sender Address | `aaronluo[@]cmail[.]carleton[.]ca` | Alert / Email Security | 🔴 Malicious |
-| 🌐 SMTP Address | `189[.]162[.]189[.]159` | Alert / Log Management | 🔴 Malicious |
+| 📧 Sender Address | `aaronluo@cmail.carleton.ca` | Alert / Email Security | 🔴 Malicious |
+| 🌐 SMTP Address | `189.162.189.159` | Alert / Log Management | 🔴 Malicious |
 | 📎 Email Attachment | MD5 hash of the attached file | VirusTotal, Hybrid Analysis | 🔴 Malicious (flagged as trojan by multiple vendors) |
-| 🖥️ Targeted Host | `172[.]16[.]20[.]3` (Exchange Server) | Log Management, Endpoint Security | 🟢 Targeted, email blocked |
+| 🖥️ Targeted Host | `172.16.20.3` (Exchange Server) | Log Management, Endpoint Security | 🟢 Targeted, email blocked |
 
 ---
 
