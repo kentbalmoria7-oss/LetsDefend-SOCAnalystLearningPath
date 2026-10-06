@@ -161,21 +161,6 @@
 | 🌏 Country | China |
 | 📍 City | Lianyungang, Jiangsu |
 
-| Question | Answer |
-| :--- | :--- |
-| Is the traffic malicious? | 🔴 **Yes.** The IP is flagged as malicious and comes from China. |
-| What type of attack? | 💉 **Command injection** using `whoami` |
-
-> 💉 **Why `whoami` is used in command injection:** when an attacker finds an input field or parameter that passes user data into a system shell without checks, they perform OS command injection.
-
-| Purpose | Explanation |
-| :--- | :--- |
-| 🧪 **Proof of concept (PoC)** | It returns a clear text answer (such as `www-data`, `root`, or `Administrator`) that proves the attacker can run arbitrary commands on the server. |
-| 🔑 **Privilege level check** | It shows which account the web application runs as. If it returns `root` or `Administrator`, the attacker has high-level control. |
-| 🙈 **Blind injection testing** | When the server doesn't show command output, attackers may redirect the output of `whoami` to a web-accessible folder, or trigger an out-of-band request such as a DNS lookup, to prove the command ran. |
-
----
-
 <!-- ===================== STEP 4 ===================== -->
 ## 📌 STEP 4: REVIEW THE RAW LOGS
 
@@ -194,12 +179,16 @@
 
 There are **5 events**, all with the source IP `61.177.172.87`, an outside internet address. All 5 show the unknown external IP communicating with the web server in question.
 
-### 📊 HTTP Response Codes
+### 📊 HTTTP Status Codes and HTTP Request Methods
 
 Before exploring the logs, the response codes were reviewed to understand what each status means.
 
 <div align="center">
 <img src="https://github.com/kentbalmoria7-oss/LetsDefend-SOCAnalystLearningPath/blob/9a1efa6d0d4bb13869c28414cb9a70579d0ed571/Web%20Investigation%20Picture/4/response%20code.png?raw=true" alt="Reference of HTTP response codes" width="85%" />
+<br/><br/>
+<img src="https://github.com/kentbalmoria7-oss/LetsDefend-SOCAnalystLearningPath/blob/cc955ed41f484d58f4e36dc19e546f8addf0a20c/Web%20Investigation%20Picture/4/http%20status%20code.png?raw=true" alt="Reference of HTTP response codes" width="85%" />
+<br/><br/>
+<img src="https://github.com/kentbalmoria7-oss/LetsDefend-SOCAnalystLearningPath/blob/cc955ed41f484d58f4e36dc19e546f8addf0a20c/Web%20Investigation%20Picture/4/http%20methods.png?raw=true" alt="Reference of HTTP response codes" width="85%" />
 </div>
 
 ### 🧾 Raw Logs
@@ -239,6 +228,20 @@ The attacker exploited a **command injection** vulnerability, typically triggere
 
 > 🌏 **Origin:** the logs show the malicious IP is located in China, so this activity did not come from inside the network.
 
+| Question | Answer |
+| :--- | :--- |
+| Is the traffic malicious? | 🔴 **Yes.** The IP is flagged as malicious and comes from China. |
+| What type of attack? | 💉 **Command injection** using `whoami` |
+
+> 💉 **Why `whoami` is used in command injection:** when an attacker finds an input field or parameter that passes user data into a system shell without checks, they perform OS command injection.
+
+| Purpose | Explanation |
+| :--- | :--- |
+| 🧪 **Proof of concept (PoC)** | It returns a clear text answer (such as `www-data`, `root`, or `Administrator`) that proves the attacker can run arbitrary commands on the server. |
+| 🔑 **Privilege level check** | It shows which account the web application runs as. If it returns `root` or `Administrator`, the attacker has high-level control. |
+| 🙈 **Blind injection testing** | When the server doesn't show command output, attackers may redirect the output of `whoami` to a web-accessible folder, or trigger an out-of-band request such as a DNS lookup, to prove the command ran. |
+
+---
 ---
 
 <!-- ===================== STEP 5 ===================== -->
